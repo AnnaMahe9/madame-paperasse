@@ -1,17 +1,14 @@
-.presentation-card {
+.main-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 15px;
-    margin: 50px;
-    padding: 20px;
-  }
-  
-  .presentation-picture {
-    width: 100%;
-    height: auto;
-  }
-  
-  .presentation-card p {
-    margin: 10px;
-  }
-  
+    padding: 50px;
+}
+
+.presentation-paragraphs-container p {
+    text-align: center;
+}
+
+.presentation-paragraphs {
+    display: flex;
+}
