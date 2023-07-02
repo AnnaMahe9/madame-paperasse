@@ -1,0 +1,48 @@
+.contactForm {
+    display: flex;
+    justify-content: center;
+    form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contactForm-row-1, .contactForm-row-2{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 1rem 0rem 1rem 0rem;
+        }
+        .nameDiv, .emailDiv, .companyDiv, .phoneDiv, .messageDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            label {
+                margin: 0rem 0rem 1rem 0rem;
+            }
+        }
+
+        .contactForm-row-3 {
+            width: 100%;
+            display: flex;
+            .messageDiv {
+                width: 100%;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            border-radius: 15px;
+            border: 0.2px solid #00000052;
+        }
+
+        input {
+            border: 0.2px solid #00000052;
+            border-radius: 15px;
+        }
+
+        .sendButton {
+            margin: 2rem;
+        }
+    }
+}
