@@ -1,3 +1,19 @@
+.stepsRemind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    .stepsRemind-row-1, .stepsRemind-row-2, .stepsRemind-row-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        h3 {
+            margin-right: 3rem;
+        }
+    }
+}
+
 .contactForm {
     display: flex;
     justify-content: center;
@@ -10,7 +26,7 @@
         .contactForm-row-1, .contactForm-row-2{
             display: flex;
             width: 100%;
-            justify-content: space-between;
+            justify-content: space-evenly;
             margin: 1rem 0rem 1rem 0rem;
         }
         .nameDiv, .emailDiv, .companyDiv, .phoneDiv, .messageDiv{
