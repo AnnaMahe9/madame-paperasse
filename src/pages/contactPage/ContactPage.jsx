@@ -60,9 +60,9 @@ export default function ContactPage() {
                 </form>
             </div>
 
-            <p>Vous pouvez également me contacter directement par téléphone, email ou sur les réseaux sociaux</p>
+            <p className='cta-sentence'>Vous pouvez également me contacter directement par téléphone, email ou sur les réseaux sociaux</p>
 
-            <div>
+            <div className='contactInfos'>
                 <p>07 50 90 57 54</p>
                 <p>madame.paperasse.rennes@gmail.com</p>
                 <p>facebok.com Intagram.com</p>
