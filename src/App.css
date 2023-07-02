@@ -49,21 +49,3 @@ h1, h2, h3 {
   width: 400px;
   height: 400px;
 }
-
-.presentation-card {
-  align-items: center;
-  background-color: white;
-  border-radius: 15px;
-  margin: 50px;
-  padding: 20px;
-  width: 200px;
-}
-
-.presentation-picture {
-  width: 300px;
-  height: auto;
-}
-
-.presentation-card p {
-  margin: 10px;
-}
