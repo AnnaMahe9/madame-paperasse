@@ -1,3 +1,6 @@
+h1 {
+    text-align: center;
+}
 .stepsRemind {
     display: flex;
     flex-direction: column;
@@ -18,6 +21,11 @@
     display: flex;
     justify-content: center;
     form {
+        // border: 0.1px solid #00000052;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 5px 5px 20px lightgray;
+        padding: 2rem;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -26,14 +34,18 @@
         .contactForm-row-1, .contactForm-row-2{
             display: flex;
             width: 100%;
-            justify-content: space-evenly;
+            justify-content: space-between;
             margin: 1rem 0rem 1rem 0rem;
         }
         .nameDiv, .emailDiv, .companyDiv, .phoneDiv, .messageDiv{
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            text-align: left;
+            width: 100%;
             label {
+                padding: 0px 8px 5px 8px;
+                border-bottom: 2px solid #429928;
                 margin: 0rem 0rem 1rem 0rem;
             }
         }
@@ -43,6 +55,7 @@
             display: flex;
             .messageDiv {
                 width: 100%;
+                margin-top: 1.5rem;
             }
         }
 
@@ -50,15 +63,24 @@
             width: 100%;
             border-radius: 15px;
             border: 0.2px solid #00000052;
+            background-color: ghostwhite;
         }
 
         input {
             border: 0.2px solid #00000052;
-            border-radius: 15px;
+            border-radius: 10px;
+            background-color: ghostwhite;
+            width: 80%;
+            height: 1.5rem;
         }
 
         .sendButton {
             margin: 2rem;
+            padding: 1rem 2rem;
+            background-color: #429928;
+            border: none;
+            border-radius: 15px;
+            color: white;
         }
     }
 }
