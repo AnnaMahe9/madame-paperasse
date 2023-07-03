@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Banner from '../../components/Banner/Banner';
 import PresentationCard from '../../components/PresentationCard/PresentationCard';
 import ValuesHorizontalLine from '../../components/valuesHorizontalLine/valuesHorizontalLine';
 import Reasons from '../../components/reasons/Reasons';
 import './HomePage.scss'
 import ProcessTimeline from '../../components/processTimeline/ProcessTimeline';
+import ContactButton from '../../components/contactButton/ContactButton';
 
 export default function HomePage() {
     const [presentationParagraphs, setPresentationParagraphs] = useState([
@@ -47,7 +49,9 @@ export default function HomePage() {
                         
                     }
                 </div>
-                <p>Cette liste n’est bien sûr pas exhaustive, je m’adapte à vos besoins, rencontrons-nous pour en parler !</p>
+                <div className="presentation-last-sentence">
+                    <p>- Cette liste n’est bien sûr pas exhaustive, je m’adapte à vos besoins, rencontrons-nous pour en parler ! -</p>
+                </div>
                 <h2>Mes valeurs</h2>
                 <ValuesHorizontalLine/>
                 <h2>Pourquoi choisir Madame Paperasse ?</h2>
@@ -55,6 +59,8 @@ export default function HomePage() {
                 <h2>Comment cela fonctionne-t-il ?</h2>
                 <ProcessTimeline/>
             </div>
-            
+            <NavLink to='/contact'>
+                <ContactButton/>            
+            </NavLink>
         </div>)
 }

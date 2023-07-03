@@ -1,0 +1,14 @@
+.main-button {
+    padding: 20px 30px;
+    background-color: #429928;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px lightgray;
+    cursor: pointer;
+    &:active {
+        box-shadow: 0 5px lightgray;
+        transform: translateY(4px);
+    }
+}

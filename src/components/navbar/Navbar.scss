@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #DA5B2E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .navbar-logo {
+    width: 60px;
+    height: 60px;
+    padding-left: 20px;
+  }
+
+  .navlinks {
+    padding-right: 20px;
+  }
+  
+  .nav-item {
+    margin: 10px;
+  }
+  

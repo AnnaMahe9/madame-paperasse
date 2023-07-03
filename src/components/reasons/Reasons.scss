@@ -1,6 +1,6 @@
 .reasons-container {
     width: 70%;
-    margin: 5em;
+    margin: 5em auto;
 }
 
 .reasons-container p {
@@ -13,14 +13,14 @@
 
 .reason-container {
     display: flex;
-}
-
-.reason-title-container {
     background-color: white;
-    margin: 15px;
+    margin: 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 20px lightgray;
     padding: 15px;
+}
+
+.reason-title-container {
     width: 100%;
 }
 

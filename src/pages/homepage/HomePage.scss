@@ -3,7 +3,9 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    width: 80%;
 }
+
 
 .presentation-card p {
     text-align: center;
@@ -11,4 +13,9 @@
 
 .presentation-paragraphs {
     display: flex;
-} 
+    margin: 5em, auto;
+}
+
+.presentation-last-sentence {
+    text-align: center;
+}

@@ -24,7 +24,7 @@ export default function Reasons() {
                     <div className='reason-container'>
                         <figure className='reason-dot'></figure>
                         <div class="reason-title-container">
-                            <h4>{reason.title}</h4>
+                            <h3>{reason.title}</h3>
                             <p>{reason.text}</p> 
                         </div>
                     </div>

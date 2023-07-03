@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <div className="banner">
       <section>
-      <h1>Bienvenue sur Madame Paperasse</h1>
+      <h1>Bienvenue chez <br /> Madame Paperasse</h1>
       <p>
         Madame Paperasse c’est à la fois une assistante administrative, une assistante RH et une assistante de gestion… 
       </p>

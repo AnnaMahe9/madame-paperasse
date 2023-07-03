@@ -1,22 +1,23 @@
 .presentation-card {
   display: flex;
+  flex: 1;
   flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 15px;
-    margin: 50px;
-    padding: 20px;
-    box-shadow: 5px 5px 20px lightgray;
-  }
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  margin: 50px;
+  padding: 20px;
+  box-shadow: 5px 5px 20px lightgray;
+}
   
-  .presentation-picture {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-  }
-  
-  .presentation-card p {
-    margin: 10px;
-  }
+.presentation-picture {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.presentation-card p {
+  margin: 10px;
+}
   
