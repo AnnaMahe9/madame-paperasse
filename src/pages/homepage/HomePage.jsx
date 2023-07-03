@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Banner from '../../components/Banner/Banner';
 import PresentationCard from '../../components/PresentationCard/PresentationCard';
-import './HomePage.scss'
 import ValuesHorizontalLine from '../../components/valuesHorizontalLine/valuesHorizontalLine';
+import Reasons from '../../components/reasons/Reasons';
+import './HomePage.scss'
+import ProcessTimeline from '../../components/processTimeline/ProcessTimeline';
 
 export default function HomePage() {
     const [presentationParagraphs, setPresentationParagraphs] = useState([
@@ -48,6 +50,10 @@ export default function HomePage() {
                 <p>Cette liste n’est bien sûr pas exhaustive, je m’adapte à vos besoins, rencontrons-nous pour en parler !</p>
                 <h2>Mes valeurs</h2>
                 <ValuesHorizontalLine/>
+                <h2>Pourquoi choisir Madame Paperasse ?</h2>
+                <Reasons/>
+                <h2>Comment cela fonctionne-t-il ?</h2>
+                <ProcessTimeline/>
             </div>
             
         </div>)

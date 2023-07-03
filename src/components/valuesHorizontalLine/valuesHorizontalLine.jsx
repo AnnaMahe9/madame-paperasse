@@ -5,7 +5,7 @@ export default function ValuesHorizontalLine() {
     const [values, setValues] = useState(["Honnêteté", "Respect", "Transparence", "Humain"])
     return (
         <div>
-            <ul>
+            <ul className="values-container">
                 {
                     values.map(value => (
                         <li>

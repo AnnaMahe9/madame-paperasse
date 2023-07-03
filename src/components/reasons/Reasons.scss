@@ -1,0 +1,35 @@
+.reasons-container {
+    width: 70%;
+    margin: 5em;
+}
+
+.reasons-container p {
+    text-align: left;
+}
+
+.reason-container, .reason-title-container {
+    align-items: center;
+}
+
+.reason-container {
+    display: flex;
+}
+
+.reason-title-container {
+    background-color: white;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px lightgray;
+    padding: 15px;
+    width: 100%;
+}
+
+.reason-dot {
+    background-color: #E6CE52;
+    padding: 1em;
+    border-radius: 100%;
+}
+
+.reason {
+    margin: 5em;
+}

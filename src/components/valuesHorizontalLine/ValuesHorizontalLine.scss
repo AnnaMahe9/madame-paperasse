@@ -2,10 +2,11 @@ $dot-size: 2em;
 $dot-color: #E6CE52;
 $dot-connection-color: #E6CE52;
 
-ul {
+.values-container {
   display: flex;
   height: 100%;
   padding: 0;
+  margin: 5em;
 
   li {
     flex: 1;
@@ -25,10 +26,6 @@ ul {
       box-shadow: 0 0 0 .25em #E6CE52, inset 0 0 0 .25em $dot-color;
       z-index: 1;
       transition: box-shadow 0.3s;
-
-      &:hover {
-        box-shadow: 0 0 0 .25em white, inset 0 0 0 .25em $dot-connection-color;
-      }
 
       figcaption {
         position: absolute;
