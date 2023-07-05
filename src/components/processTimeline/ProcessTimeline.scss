@@ -2,7 +2,7 @@ $dot-size: 2.5em;
 $yellow: #E6CE52;
   
   /*===== Vertical Timeline =====*/
-  #conference-timeline {
+  .conference-timeline {
     position: relative;
     width: 80%;
     margin: 5em auto;
@@ -11,8 +11,8 @@ $yellow: #E6CE52;
     box-shadow: 5px 5px 20px lightgray;
   }
   
-  #conference-timeline .timeline-start,
-  #process-timeline {
+  .conference-timeline .timeline-start,
+  .process-timeline {
     display: table;
     background: $yellow;
     padding: 10px 20px;
@@ -20,7 +20,7 @@ $yellow: #E6CE52;
     width: 100%;
     margin: 0 auto;
   }
-  #conference-timeline .conference-center-line {
+  .conference-timeline .conference-center-line {
     position: absolute;
     width: 5px;
     height: 75%;
@@ -51,7 +51,6 @@ $yellow: #E6CE52;
   .timeline-article .content-right {
     position: relative;
     width: auto;
-    box-shadow: 0 1px 3px rgba(0,0,0,.03);
     padding: 10px;
   }
   
@@ -83,11 +82,11 @@ $yellow: #E6CE52;
   
   /*===== Resonsive Vertical Timeline =====*/
   @media only screen and (max-width: 830px) {
-    #conference-timeline .timeline-start,
-    #conference-timeline .timeline-end {
+    .conference-timeline .timeline-start,
+    .conference-timeline .timeline-end {
       margin: 0;
     }
-    #conference-timeline .conference-center-line {
+    .conference-timeline .conference-center-line {
       margin-left: 0;
       left: 50px;
     }

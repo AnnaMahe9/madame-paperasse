@@ -49,8 +49,11 @@ export default function HomePage() {
                         
                     }
                 </div>
-                <div className="presentation-last-sentence">
+                <div className="presentation-last-container">
                     <p>- Cette liste n’est bien sûr pas exhaustive, je m’adapte à vos besoins, rencontrons-nous pour en parler ! -</p>
+                    <NavLink to='/prestations'>
+                        <ContactButton text="Voir les prestations"/>            
+                    </NavLink>
                 </div>
                 <h2>Mes valeurs</h2>
                 <ValuesHorizontalLine/>
@@ -60,7 +63,7 @@ export default function HomePage() {
                 <ProcessTimeline/>
             </div>
             <NavLink to='/contact'>
-                <ContactButton/>            
+                <ContactButton text="Contactez-moi"/>            
             </NavLink>
         </div>)
 }

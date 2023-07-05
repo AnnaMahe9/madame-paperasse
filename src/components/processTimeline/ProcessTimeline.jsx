@@ -3,7 +3,7 @@ import './ProcessTimeline.scss'
 
 export default function ProcessTimeline() {
     return (
-        <section id="conference-timeline">
+        <section class="conference-timeline">
             {/* <div class="timeline-start">Start</div> */}
             <div class="conference-center-line"></div>
             <div class="conference-timeline-content">
