@@ -1,14 +1,15 @@
 import React from 'react'
+import './Navbar.scss'
 
 export default function Navbar() {
   return (
     <div className="navbar">
       <img src="logo.png" alt="logo" className="navbar-logo"/>
-      <section>
+      <div className="navlinks">
         <a href="/" className="nav-item">Accueil</a>
-        <a href="/" className="nav-item">Prestations</a>
-        <a href="/" className="nav-item">Contact</a>
-      </section>
+        <a href="/prestations" className="nav-item">Prestations</a>
+        <a href="/contact" className="nav-item">Contact</a>
+      </div>
     </div>
   )
 }

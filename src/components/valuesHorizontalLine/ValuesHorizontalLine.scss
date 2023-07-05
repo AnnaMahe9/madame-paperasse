@@ -1,0 +1,59 @@
+$dot-size: 2em;
+$dot-color: #E6CE52;
+$dot-connection-color: #E6CE52;
+
+.values-container {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 5em auto;
+
+  li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: relative;
+
+    figure {
+      position: relative;
+      background-color: $dot-color;
+      width: $dot-size;
+      height: $dot-size;
+      border-radius: 50%;
+      box-shadow: 0 0 0 .25em #E6CE52, inset 0 0 0 .25em $dot-color;
+      z-index: 1;
+      transition: box-shadow 0.3s;
+
+      figcaption {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        text-align: center;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: $dot-connection-color;
+      z-index: 0;
+    }
+    &:first-child::before {
+      left: 50%;
+    }
+    &:last-child::before {
+      left: -50%;
+    }
+
+
+  }
+}
