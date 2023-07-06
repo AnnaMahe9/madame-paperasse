@@ -1,14 +1,15 @@
 import React from 'react'
 import './Navbar.scss'
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
     <div className="navbar">
-      <img src="logo.png" alt="logo" className="navbar-logo"/>
+      <NavLink to='/'className="nav-item"><img src="logo.png" alt="logo" className="navbar-logo"/></NavLink>
       <div className="navlinks">
-        <a href="/" className="nav-item">Accueil</a>
-        <a href="/prestations" className="nav-item">Prestations</a>
-        <a href="/contact" className="nav-item">Contact</a>
+        <NavLink to='/'className="nav-item">Accueil</NavLink>
+        <NavLink to='/prestations'className="nav-item">Prestations</NavLink>
+        <NavLink to='/contact'className="nav-item">Contact</NavLink>
       </div>
     </div>
   )

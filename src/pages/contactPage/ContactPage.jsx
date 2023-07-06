@@ -1,31 +1,53 @@
-import './ContactPage.scss'
+import ContactButton from '../../components/contactButton/ContactButton';
+import ProcessTimeline from '../../components/processTimeline/ProcessTimeline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './ContactPage.scss';
+import { faEnvelope, faMobile, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { ScrollToPlugin } from 'gsap/all';
+import { useEffect } from 'react';
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 export default function ContactPage() {
     // state
 
     // behavior
 
+    const slideTop = (elem) => {
+        gsap.fromTo(
+          elem,
+          {
+            opacity:0,
+            y:-200
+          },
+          {
+            opacity:1,
+            y: 0,
+            scrollTrigger: {
+              trigger: elem,
+              start:"top center",
+              end: "bottom center"
+            }
+          }
+        )
+      }
+      
+      useEffect(()=> {
+        slideTop(".contactForm")
+      })
+
+
+
     // render
     return (
-        <div>
+        <div id="contact-title">
             <h1>Contact</h1>
-            <div className='stepsRemind'>
-                <h2>Comment cela fonctionne ?</h2>
-                <div>
-                    <div className='stepsRemind-row-1'>
-                        <h3>Prise de contact</h3>
-                        <p>Vous me contactez (par mail, sur les réseaux ou via ce formulaire ) en me décrivant en quelques mots votre besoin</p>
-                    </div>
-                    <div className='stepsRemind-row-2'>
-                        <h3>Recontre</h3>
-                        <p>On fixe ensemble un rendez-vous afin de se rencontrer, définir ensemble vos besoins et préparer notre collaboration</p>
-                    </div>
-                    <div className='stepsRemind-row-3'>
-                        <h3>Devis</h3>
-                        <p>Moins de 48h après le RDV, je vous transmets un devis. Une fois ce dernier accepté, notre collaboration commence ! </p>
-                    </div>
-                </div>
-            </div>
+            <h2>Comment cela fonctionne-t-il ?</h2>
+            <ProcessTimeline/>
+
+            <h2>Formulaire de contact</h2>
 
             <div className="contactForm">
 
@@ -56,16 +78,17 @@ export default function ContactPage() {
                             <textarea name="" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
-                    <button className='sendButton'>Envoyer</button>
+                    <ContactButton text="Envoyer"/>
                 </form>
             </div>
 
             <p className='cta-sentence'>Vous pouvez également me contacter directement par téléphone, email ou sur les réseaux sociaux</p>
 
+            <div className='separation-line'></div>
+
             <div className='contactInfos'>
-                <p>07 50 90 57 54</p>
-                <p>madame.paperasse.rennes@gmail.com</p>
-                <p>facebok.com Intagram.com</p>
+                <p> <FontAwesomeIcon icon={faMobileScreenButton} className='contact-icon' /> 07 50 90 57 54</p>
+                <p> <FontAwesomeIcon icon={faEnvelope} className='contact-icon' />madame.paperasse.rennes@gmail.com</p>
             </div>
         </div>
     )

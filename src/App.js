@@ -6,7 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import './App.css';
 import ContactPage from './pages/contactPage/ContactPage';
-
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 function App() {
   return (

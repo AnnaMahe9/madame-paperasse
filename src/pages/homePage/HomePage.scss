@@ -1,0 +1,25 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 80%;
+}
+
+
+.presentation-card p {
+    text-align: center;
+}
+
+.presentation-paragraphs {
+    display: flex;
+    margin: 5em, auto;
+}
+
+.presentation-last-container {
+    text-align: center;
+}
+
+.presentation-last-container p {
+   padding-bottom: 20px;
+}

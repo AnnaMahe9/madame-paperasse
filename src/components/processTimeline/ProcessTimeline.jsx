@@ -1,7 +1,59 @@
-import React from 'react'
-import './ProcessTimeline.scss'
+import React, { useEffect } from 'react';
+import './ProcessTimeline.scss';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { ScrollToPlugin } from 'gsap/all';
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 export default function ProcessTimeline() {
+    const slideTop = (elem) => {
+        gsap.fromTo(
+          elem,
+          {
+            opacity:0,
+            y:-200
+          },
+          {
+            opacity:1,
+            y: 0,
+            delay:0.2,
+            scrollTrigger: {
+              trigger: elem,
+              start:"top center",
+              end: "bottom center"
+            }
+          }
+        )
+      }
+
+      const slideTopLine = (elem) => {
+        gsap.fromTo(
+          elem,
+          {
+            opacity:0,
+            y:200
+          },
+          {
+            opacity:1,
+            y: 0,
+            delay:0.6,
+            scrollTrigger: {
+              trigger: elem,
+              start:"top center",
+              end: "bottom center"
+            }
+          }
+        )
+      }
+      
+      useEffect(()=> {
+        slideTopLine(".conference-center-line")
+      }, [])
+      useEffect(()=> {
+        slideTop(".conference-timeline")
+      }, [])
+
     return (
         <section class="conference-timeline">
             {/* <div class="timeline-start">Start</div> */}
