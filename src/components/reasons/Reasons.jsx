@@ -1,5 +1,10 @@
-import React, { useState } from 'react'
-import './Reasons.scss'
+import React, { useEffect, useState } from 'react'
+import './Reasons.scss';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { ScrollToPlugin } from 'gsap/all';
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 export default function Reasons() {
     const [reasons, setreasons] = useState([
@@ -16,6 +21,30 @@ export default function Reasons() {
             text: "Les chefs d’entreprise ont tous un point en commun… il manque de temps ! Que ce soit pour consacrer du temps à leur vie perso, ou à son cœur de métier et se développer… Externaliser la paperasse c’est s’offrir du temps en plus dans la journée"
         }
     ])
+
+    const slideTop = (elem) => {
+        gsap.fromTo(
+          elem,
+          {
+            opacity:0,
+            y:-200
+          },
+          {
+            opacity:1,
+            y: 0,
+            delay:0.3,
+            scrollTrigger: {
+              trigger: elem,
+              start:"top center",
+              end: "bottom center"
+            }
+          }
+        )
+      }
+      
+      useEffect(()=> {
+        slideTop(".reason-container")
+      })
 
     return (
         <ul className='reasons-container'>

@@ -1,0 +1,20 @@
+.footer {
+    background-color: #DA5B2E;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+}
+
+.icon {
+    font-size: 40px;
+    color: white;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
