@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import './ContactPage.scss'
+import { useState } from 'react';
+import './ContactPage.scss';
 import Alert from '../../components/Alert/Alert';
 
 export default function ContactPage() {
     // state
     const [mailInfos, setMailInfos] = useState({email: "", message: ""});
-    const [errors, setErrors] = useState([
-        {errorMail: "Email not correct", isTrue: false}
-    ]);
+    const [error, setError] = useState(null);
 
     // behavior
+    function isValidEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+      }
+
     const sendEmail = async (event) => {
         event.preventDefault()
         console.log('PROUT')
@@ -38,16 +40,21 @@ export default function ContactPage() {
                 }
             )
         } else {
-            // console.log(errors[0])
-            // const errorsCopy = [...errors]
-            // console.log(errorsCopy)
-            // setErrors(errorsCopy[0].isTrue = true)
+            return (
+                "Hi! You have a problem"
+                )    
         }
             
     }
 
     const handleChange = (event) => {
         console.log(event);
+        if (!isValidEmail(event.target.value)) {
+            setError('Email is invalid');
+          } else {
+            setError('All good');
+          }
+      
         setMailInfos({ ...mailInfos, [event.target.name]: event.target.value })
     }
 
@@ -76,9 +83,9 @@ export default function ContactPage() {
             <div className="contactForm">
 
                 <form action="">
-                    <div>
-                        {errors[0].isTrue ? (<div>{errors[0].errorMail}</div>) : (<div></div>) }
-                    </div>
+                    {
+                        
+                    }
                     <div className='contactForm-row-1'>
                         <div className='nameDiv'>
                             <label htmlFor="names">Nom et prénom</label>
@@ -87,6 +94,8 @@ export default function ContactPage() {
                         <div className='emailDiv'>
                             <label htmlFor="email">Email</label>
                             <input type="email" name="email" value={mailInfos.email} onChange={handleChange}/>
+                            {error && <p>{error}</p>}
+                            
                         </div>
                     </div>
                     <div className='contactForm-row-2'>
