@@ -1,9 +1,55 @@
+import { useState } from 'react'
 import './ContactPage.scss'
+import Alert from '../../components/Alert/Alert';
 
 export default function ContactPage() {
     // state
+    const [mailInfos, setMailInfos] = useState({email: "", message: ""});
+    const [errors, setErrors] = useState([
+        {errorMail: "Email not correct", isTrue: false}
+    ]);
 
     // behavior
+    const sendEmail = async (event) => {
+        event.preventDefault()
+        console.log('PROUT')
+        if(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(mailInfos.email)) {
+
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "email": mailInfos.email,
+                    "message": mailInfos.message
+                })
+            }
+            
+            console.log(requestOptions.body)
+            await fetch('http://localhost:3001/sendEmail', requestOptions)
+            .then(
+                (data) => {
+                    console.log(data)
+                    setMailInfos({email: "", message: ""})
+                },
+                (error) => {
+                    console.log(error)
+                }
+            )
+        } else {
+            // console.log(errors[0])
+            // const errorsCopy = [...errors]
+            // console.log(errorsCopy)
+            // setErrors(errorsCopy[0].isTrue = true)
+        }
+            
+    }
+
+    const handleChange = (event) => {
+        console.log(event);
+        setMailInfos({ ...mailInfos, [event.target.name]: event.target.value })
+    }
 
     // render
     return (
@@ -30,33 +76,36 @@ export default function ContactPage() {
             <div className="contactForm">
 
                 <form action="">
+                    <div>
+                        {errors[0].isTrue ? (<div>{errors[0].errorMail}</div>) : (<div></div>) }
+                    </div>
                     <div className='contactForm-row-1'>
                         <div className='nameDiv'>
-                            <label htmlFor="">Nom et prénom</label>
-                            <input type="text" />
+                            <label htmlFor="names">Nom et prénom</label>
+                            <input type="text" name="names"/>
                         </div>
                         <div className='emailDiv'>
-                            <label htmlFor="">Email</label>
-                            <input type="text" />
+                            <label htmlFor="email">Email</label>
+                            <input type="email" name="email" value={mailInfos.email} onChange={handleChange}/>
                         </div>
                     </div>
                     <div className='contactForm-row-2'>
                         <div className='companyDiv'>
-                            <label htmlFor="">Entreprise</label>
-                            <input type="text" />
+                            <label htmlFor="company">Entreprise</label>
+                            <input type="text" name='company'/>
                         </div>
                         <div className='phoneDiv'>
-                            <label htmlFor="">Numéro de téléphone</label>
-                            <input type="text" />
+                            <label htmlFor="phoneNumber">Numéro de téléphone</label>
+                            <input type="text" name='phoneNumber'/>
                         </div>
                     </div>
                     <div className='contactForm-row-3'>
                         <div className='messageDiv'>
-                            <label htmlFor="">Message</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <label htmlFor="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" value={mailInfos.message} onChange={handleChange}></textarea>
                         </div>
                     </div>
-                    <button className='sendButton'>Envoyer</button>
+                    <button className='sendButton' onClick={sendEmail}>Envoyer</button>
                 </form>
             </div>
 
