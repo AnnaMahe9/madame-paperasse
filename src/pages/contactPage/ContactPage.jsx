@@ -6,14 +6,47 @@ import { faEnvelope, faMobile, faMobileScreenButton } from '@fortawesome/free-so
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 export default function ContactPage() {
     // state
+    const [mailInfos, setMailInfos] = useState({email: "", message: ""});
+    const [error, setError] = useState(null);
 
     // behavior
+    const sendEmail = async (event) => {
+        event.preventDefault()
+        
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "email": mailInfos.email,
+                "message": mailInfos.message
+            })
+        }
+        
+        console.log(requestOptions.body)
+        await fetch('http://localhost:3001/sendEmail', requestOptions)
+        .then(
+            (data) => {
+                console.log(data)
+                setMailInfos({email: "", message: ""})
+            },
+            (error) => {
+                console.log(error)
+            }
+        )
+        
+            
+    }
+    function isValidEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    }
 
     const slideTop = (elem) => {
         gsap.fromTo(
@@ -35,10 +68,20 @@ export default function ContactPage() {
       }
       
       useEffect(()=> {
-        slideTop(".contactForm")
+        // slideTop(".contactForm")
       })
 
 
+    const handleChange = (event) => {
+        console.log(event);
+        if (!isValidEmail(event.target.value)) {
+            setError('Email is invalid');
+        } else {
+            setError('All good');
+        }
+        
+        setMailInfos({ ...mailInfos, [event.target.name]: event.target.value })
+    }
 
     // render
     return (
@@ -58,8 +101,9 @@ export default function ContactPage() {
                             <input type="text" />
                         </div>
                         <div className='emailDiv'>
-                            <label htmlFor="">Email</label>
-                            <input type="text" />
+                            <label htmlFor="email">Email</label>
+                            <input type="email" name="email" value={mailInfos.email} onChange={handleChange}/>
+                            {error && <p>{error}</p>}
                         </div>
                     </div>
                     <div className='contactForm-row-2'>
@@ -74,11 +118,11 @@ export default function ContactPage() {
                     </div>
                     <div className='contactForm-row-3'>
                         <div className='messageDiv'>
-                            <label htmlFor="">Message</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <label htmlFor="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" value={mailInfos.message} onChange={handleChange}></textarea>
                         </div>
                     </div>
-                    <ContactButton text="Envoyer"/>
+                    <ContactButton text="Envoyer" onClick={sendEmail}/>
                 </form>
             </div>
 

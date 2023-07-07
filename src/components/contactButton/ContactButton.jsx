@@ -1,8 +1,8 @@
 import React from 'react';
 import './ContactButton.scss'
 
-export default function ContactButton({text}) {
+export default function ContactButton({text, onClick}) {
     return (
-        <button className='main-button'>{text}</button>
+        <button className='main-button' onClick={onClick}>{text}</button>
     )
 }
