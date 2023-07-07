@@ -2,7 +2,7 @@ import ContactButton from '../../components/contactButton/ContactButton';
 import ProcessTimeline from '../../components/processTimeline/ProcessTimeline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ContactPage.scss';
-import { faEnvelope, faMobile, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck, faCircleExclamation, faEnvelope, faMobile, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
@@ -74,9 +74,9 @@ export default function ContactPage() {
     const handleChange = (event) => {
         console.log(event);
         if (!isValidEmail(event.target.value)) {
-            setError('Email is invalid');
+            setError(<FontAwesomeIcon icon={faCircleExclamation} className='wrong-mail-icon'/>);
         } else {
-            setError('All good');
+            setError(<FontAwesomeIcon icon={faCircleCheck} className='right-mail-icon' />);
         }
         
         setMailInfos({ ...mailInfos, [event.target.name]: event.target.value })
@@ -102,7 +102,9 @@ export default function ContactPage() {
                         <div className='emailDiv'>
                             <label htmlFor="email">Email</label>
                             <input type="email" name="email" value={mailInfos.email} onChange={handleChange}/>
-                            {error && <p>{error}</p>}
+                            <div className="mail-validation-icon">
+                                {error && <>{error}</>}
+                            </div>
                         </div>
                     </div>
                     <div className='contactForm-row-2'>

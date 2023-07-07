@@ -51,6 +51,10 @@ h1 {
             }
         }
 
+        .emailDiv {
+            position: relative;
+        }
+
         .contactForm-row-3 {
             width: 100%;
             display: flex;
@@ -108,4 +112,20 @@ h1 {
     color: #429928;
     font-size: 20px;
     margin-right: 5px;
+}
+
+.mail-validation-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    .wrong-mail-icon {
+        color: #DA5B2E;
+    }
+    .right-mail-icon {
+        color:#429928;
+    }
 }
