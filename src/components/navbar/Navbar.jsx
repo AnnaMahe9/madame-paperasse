@@ -12,5 +12,6 @@ export default function Navbar() {
         <NavLink to='/contact'className="nav-item">Contact</NavLink>
       </div>
     </div>
+      
   )
 }
