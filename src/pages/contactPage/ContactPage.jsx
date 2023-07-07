@@ -34,7 +34,6 @@ export default function ContactPage() {
         await fetch('http://localhost:3001/sendEmail', requestOptions)
         .then(
             (data) => {
-                console.log(data)
                 setMailInfos({email: "", message: ""})
             },
             (error) => {
