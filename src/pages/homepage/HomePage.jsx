@@ -39,7 +39,7 @@ export default function HomePage() {
             
             <Banner/>
             <div className="presentation-paragraphs-container">
-                <h2>Qui suis-je ?</h2>
+                <h2 id="discover">Qui suis-je ?</h2>
                 <div className="presentation-paragraphs">
                     {
                         

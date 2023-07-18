@@ -2,16 +2,33 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
+  }
+
+  .divider {
+    border-right: 3px solid #DA5B2E;
+    height: 65%;
   }
   
   .banner h1 {
     margin: 0;
     font-weight: bold;
+    text-align: left;
+  }
+
+  .banner p {
+    margin-bottom: 50px;
+  }
+
+  .banner-titles {
+    scroll-behavior: smooth;
   }
   
   .banner-logo {
-    width: 400px;
+    width: auto;
     height: 400px;
-    }
+    // object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px gray;
+  }

@@ -11,7 +11,7 @@ export default function Footer() {
             <p>- Madame Paperasse -</p>
             <div className='socials'>
                 <NavLink to='https://www.instagram.com/mme.paperasse/'><FontAwesomeIcon icon={faInstagramSquare} className='icon' /></NavLink>
-                <FontAwesomeIcon icon={faFacebookSquare} className='icon' />
+                <NavLink to='https://www.facebook.com/Mme.paperasse'><FontAwesomeIcon icon={faFacebookSquare} className='icon' /></NavLink>
             </div>
             <p>- Mentions légales -</p>
         </div>

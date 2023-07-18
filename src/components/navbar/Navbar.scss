@@ -6,16 +6,25 @@
     width: 100%;
   }
   
-  .navbar a {
+  .navbar a, .navbar p {
     text-decoration: none;
     color: white;
     font-size: 20px;
   }
+
+
   
   .navbar-logo {
     width: 70px;
     height: 70px;
     padding-left: 20px;
+    margin-right: 30px;
+  }
+
+  .test {
+    display: flex;
+    align-items: center;
+    color: white;
   }
 
   .navlinks {
