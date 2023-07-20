@@ -44,7 +44,6 @@ $yellow: #E6CE52;
   .timeline-article .content-left-container,
   .timeline-article .content-right-container {
     max-width: 45%;
-    width: 100%;
   }
 
   .timeline-article .content-left,
@@ -64,6 +63,7 @@ $yellow: #E6CE52;
     text-align: right;
     width: 200px;
   }
+
   .timeline-article .content-right-container {
     float: right;
     text-align: left;
@@ -79,53 +79,54 @@ $yellow: #E6CE52;
     border-radius: 100%;
     background: $yellow;
   }
-  
-  /*===== Resonsive Vertical Timeline =====*/
-  @media only screen and (max-width: 830px) {
-    .conference-timeline .timeline-start,
-    .conference-timeline .timeline-end {
-      margin: 0;
+
+  @media screen and (max-width:500px) {
+
+    .conference-timeline {
+      width: 100%;
+      margin: 40px 0;
+    }
+
+    .timeline-article {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
     }
     .conference-timeline .conference-center-line {
-      margin-left: 0;
-      left: 50px;
+      width: 3px;
+      height: 75%;
+      top: 5%;
+      left: 1.5%;
     }
+
     .timeline-article .meta-date {
-      margin-left: 0;
-      left: 20px;
+      top: 15%;
+      left: 5%;
+      width: 1em;
+      height: 1em;
     }
+
     .timeline-article .content-left-container,
     .timeline-article .content-right-container {
       max-width: 100%;
-      width: auto;
-      float: none;
-      margin-left: 110px;
-      min-height: 53px;
     }
-    .timeline-article .content-left-container {
-      margin-bottom: 20px;
+
+    .timeline-article h4, .timeline-article p {
+      text-align: left;
+      padding: 0;
     }
-    .timeline-article .content-left,
-    .timeline-article .content-right {
-      padding: 10px 25px;
-      min-height: 65px;
-    }
-    .timeline-article .content-left:before {
-      content: "\f0d9";
-      right: auto;
-      left: -8px;
-    }
-    .timeline-article .content-right:before {
-      display: none;
-    }
-  }
-  @media only screen and (max-width: 400px) {
+
     .timeline-article p {
+      margin-left: 20px;
+    }
+
+    .timeline-article h4 {
+      margin-left: 30px;
+    }
+
+    .timeline-article .content-right-container {
       margin: 0;
     }
-    .timeline-article p span.article-number {
-      display: none;
-    }
-    
   }
-  /*===== // Resonsive Vertical Timeline =====*/
+  
+  /*===== Resonsive Vertical Timeline =====*/
