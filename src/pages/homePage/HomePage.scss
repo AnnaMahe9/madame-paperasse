@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    justify-content: center;
     width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
 }
-
 
 .presentation-card p {
     text-align: center;
@@ -13,7 +14,10 @@
 
 .presentation-paragraphs {
     display: flex;
-    margin: 5em, auto;
+}
+
+.presentation-paragraphs-container {
+    width: 100%;
 }
 
 .presentation-last-container {
@@ -23,3 +27,13 @@
 .presentation-last-container p {
    padding-bottom: 20px;
 }
+
+@media screen and (max-width: 500px) {
+    .presentation-paragraphs-container h2 {
+        margin-bottom: 20px;
+    }
+    .presentation-paragraphs {
+        flex-direction: column;
+    }
+}
+
