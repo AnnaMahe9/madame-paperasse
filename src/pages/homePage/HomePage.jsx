@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 import { HashLink, HashLink as Link } from 'react-router-hash-link'
 import Banner from '../../components/Banner/Banner';
 import PresentationCard from '../../components/PresentationCard/PresentationCard';
@@ -56,13 +55,15 @@ export default function HomePage() {
                         <ContactButton text="Voir les prestations"/>            
                     </HashLink>
                 </div>
+            </div>
+            <div className="presentation-paragraphs-container">
                 <h2>Mes valeurs</h2>
                 <ValuesHorizontalLine/>
+            </div>
                 <h2>Pourquoi choisir Madame Paperasse ?</h2>
                 <Reasons/>
                 <h2>Comment cela fonctionne-t-il ?</h2>
                 <ProcessTimeline/>
-            </div>
             <HashLink to='/contact#contact-title'>
                 <ContactButton text="Contactez-moi"/>            
             </HashLink>

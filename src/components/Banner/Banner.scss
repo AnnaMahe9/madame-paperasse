@@ -23,12 +23,39 @@
 
   .banner-titles {
     scroll-behavior: smooth;
+    margin-bottom: 10px;
   }
   
   .banner-logo {
     width: auto;
     height: 400px;
-    // object-fit: cover;
     border-radius: 30px;
     box-shadow: 5px 5px 20px gray;
+  }
+
+  .phone-banner-logo {
+    display: none;
+  }
+
+  @media screen and (max-width:500px) {
+    .banner h1 {
+      font-size: 30px;
+    }
+
+    .banner-logo {
+      display: none;
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .phone-banner-logo {
+      display: flex;
+      width: 50%;
+      height: auto;
+      border-radius: 30px;
+      box-shadow: 5px 5px 20px gray;
+    }
+
   }

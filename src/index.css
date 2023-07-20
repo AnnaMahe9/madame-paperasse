@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-#root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 body {
   margin: 0;
@@ -24,6 +19,10 @@ code {
 p, li, label {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
+}
+
+li {
+  list-style-type: none;
 }
 
 h1, h2, h3, h4 {
@@ -45,4 +44,12 @@ h3 {
 
 h4 {
   font-size: 22px;
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
