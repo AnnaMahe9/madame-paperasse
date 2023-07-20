@@ -16,3 +16,10 @@
         transform: translateY(4px);
     }
 }
+
+@media screen and (max-width: 500px) {
+    .main-button {
+        font-size: 15px;
+        padding: 15px 25px;
+    }
+}

@@ -9,8 +9,8 @@ export default function Banner() {
   return (
     <div className="banner">
       <div className='banner-titles'>
-        <h1 className='animate__animated animate__fadeInDown'>Bienvenue chez <br /> Madame Paperasse</h1>
         <img src="madame.jpg" alt="Madame Paperasse" className="phone-banner-logo animate__animated animate__fadeInRight" />
+        <h1 className='animate__animated animate__fadeInDown'>Bienvenue chez <br /> Madame Paperasse</h1>
         <p>
           Madame Paperasse c’est à la fois une assistante administrative, une assistante RH et une assistante de gestion… 
         </p>
