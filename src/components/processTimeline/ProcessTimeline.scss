@@ -93,15 +93,12 @@ $yellow: #E6CE52;
       padding: 0;
     }
     .conference-timeline .conference-center-line {
-      width: 3px;
-      height: 75%;
-      top: 5%;
-      left: 1.5%;
+      display: none;
     }
 
     .timeline-article .meta-date {
-      top: 15%;
-      left: 5%;
+      top: 10%;
+      left: 4%;
       width: 1em;
       height: 1em;
     }
