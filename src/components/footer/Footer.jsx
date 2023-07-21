@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 export default function Footer() {
     return (
         <div className='footer'>
-            <p>- Madame Paperasse -</p>
+            <p className='footer-title'>- Madame Paperasse -</p>
             <div className='socials'>
                 <NavLink to='https://www.instagram.com/mme.paperasse/'><FontAwesomeIcon icon={faInstagramSquare} className='icon' /></NavLink>
                 <NavLink to='https://www.facebook.com/Mme.paperasse'><FontAwesomeIcon icon={faFacebookSquare} className='icon' /></NavLink>

@@ -18,3 +18,22 @@
         transform: scale(1.2);
     }
 }
+
+@media screen and (max-width:500px) {
+    .footer {
+        flex-direction: row-reverse;
+        padding: 0;
+        height: 60px;
+    }
+    .footer-title {
+        display: none;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row-reverse;
+        .icon {
+            font-size: 30px;
+        }
+    }
+}
