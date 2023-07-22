@@ -84,56 +84,58 @@ export default function ContactPage() {
 
     // render
     return (
-        <div id="contact-title">
-            <h1>Contact</h1>
-            <h2>Comment cela fonctionne-t-il ?</h2>
-            <ProcessTimeline/>
+        <div className="main-container">
+            <div id="contact-title">
+                <h1>Contact</h1>
+                <h3>Comment cela fonctionne-t-il ?</h3>
+                <ProcessTimeline/>
 
-            <h2>Formulaire de contact</h2>
+                <h2>Formulaire de contact</h2>
 
-            <div className="contactForm">
+                <div className="contactForm">
 
-                <form action="">
-                    <div className='contactForm-row-1'>
-                        <div className='nameDiv'>
-                            <label htmlFor="">Nom et prénom</label>
-                            <input type="text" />
-                        </div>
-                        <div className='emailDiv'>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="email" value={mailInfos.email} onChange={handleChange}/>
-                            <div className="mail-validation-icon">
-                                {error && <>{error}</>}
+                    <form action="">
+                        <div className='contactForm-row-1'>
+                            <div className='nameDiv'>
+                                <label htmlFor="">Nom et prénom</label>
+                                <input type="text" />
+                            </div>
+                            <div className='emailDiv'>
+                                <label htmlFor="email">Email</label>
+                                <input type="email" name="email" value={mailInfos.email} onChange={handleChange}/>
+                                <div className="mail-validation-icon">
+                                    {error && <>{error}</>}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='contactForm-row-2'>
-                        <div className='companyDiv'>
-                            <label htmlFor="">Entreprise</label>
-                            <input type="text" />
+                        <div className='contactForm-row-2'>
+                            <div className='companyDiv'>
+                                <label htmlFor="">Entreprise</label>
+                                <input type="text" />
+                            </div>
+                            <div className='phoneDiv'>
+                                <label htmlFor="">Numéro de téléphone</label>
+                                <input type="text" />
+                            </div>
                         </div>
-                        <div className='phoneDiv'>
-                            <label htmlFor="">Numéro de téléphone</label>
-                            <input type="text" />
+                        <div className='contactForm-row-3'>
+                            <div className='messageDiv'>
+                                <label htmlFor="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="10" value={mailInfos.message} onChange={handleChange}></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div className='contactForm-row-3'>
-                        <div className='messageDiv'>
-                            <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" cols="30" rows="10" value={mailInfos.message} onChange={handleChange}></textarea>
-                        </div>
-                    </div>
-                    <ContactButton text="Envoyer" onClick={sendEmail}/>
-                </form>
-            </div>
+                        <ContactButton text="Envoyer" onClick={sendEmail}/>
+                    </form>
+                </div>
 
-            <p className='cta-sentence'>Vous pouvez également me contacter directement par téléphone, email ou sur les réseaux sociaux</p>
+                <p className='cta-sentence'>Vous pouvez également me contacter directement par téléphone, email ou sur les réseaux sociaux</p>
 
-            <div className='separation-line'></div>
+                <div className='separation-line'></div>
 
-            <div className='contactInfos'>
-                <p> <FontAwesomeIcon icon={faMobileScreenButton} className='contact-icon' /> 07 50 90 57 54</p>
-                <p> <FontAwesomeIcon icon={faEnvelope} className='contact-icon' />madame.paperasse.rennes@gmail.com</p>
+                <div className='contactInfos'>
+                    <p> <FontAwesomeIcon icon={faMobileScreenButton} className='contact-icon' /> 07 50 90 57 54</p>
+                    <p className='mailInfos'> <FontAwesomeIcon icon={faEnvelope} className='contact-icon' />madame.paperasse.rennes@gmail.com</p>
+                </div>
             </div>
         </div>
     )

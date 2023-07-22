@@ -1,13 +1,32 @@
-#presta-timeline {
-    width: 100%;
-    background-color: transparent;
-    box-shadow: none;
+.presta-timeline {
+    position: relative;
+    width: 80%;
+    margin: 5em auto;
 }
 
-.conference-timeline .presta-line {
+.presta-timeline .presta-line {
+    position: absolute;
+    width: 5px;
     height: 80%;
     top: 0%;
-    
+    left: 35%;
+    background: #E6CE52;
+    z-index: 10;
+}
+
+.timeline-article .presta-date {
+    position: absolute;
+    top: 30%;
+    left: 33.5%;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    background: #E6CE52;
+}
+
+.timeline-article .presta-article {
+    display: flex;
+    justify-content: space-between;
 }
 
 .prestation-picture {
@@ -17,6 +36,18 @@
     border-radius: 50%;
     padding: 20px;
     box-shadow: 5px 5px 20px lightgray;
+}
+
+.presta-content-left-container {
+    width: 30%;
+    display: grid;
+    justify-items: end;
+    align-items: flex-start;
+}
+
+.presta-content-right-container {
+    width: 60%;
+    margin-left: 5em;
 }
 
 .timeline-article .presta-content-right {
@@ -43,6 +74,7 @@
 .presta-article {
     padding: 0;
     margin: 1rem 0;
+    display: flex;
     align-items: normal;
 }
 
@@ -54,4 +86,42 @@
     border-radius: 15px;
     box-shadow: 5px 5px 20px lightgray;
     margin: 20px;
+}
+
+@media screen and (max-width:500px) {
+     .presta-content-left-container, .presta-timeline .presta-line, .presta-date {
+        display: none;
+     }
+     
+     .presta-timeline {
+        width: 100%;
+        margin-top: 20px;
+     }
+
+    #presta-title {
+    margin-top: 20px;
+    }
+
+    .presta-content-right h4 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .presta-content-right-container {
+        width: 100%;
+        margin: 0;
+    }  
+    
+    .presta-content-right, .presta-content-right li {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .presta-last-sentences {
+        width: fit-content;
+        p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
 }

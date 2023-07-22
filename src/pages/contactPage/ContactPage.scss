@@ -133,3 +133,48 @@ h1 {
         color:#429928;
     }
 }
+
+@media screen and (max-width:500px) {
+    #contact-title, 
+    #contact-title h3,
+    .contactForm
+     {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .contactForm form {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .contactForm form .contactForm-row-1, 
+    .contactForm form .contactForm-row-2 {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .contactForm form .nameDiv,
+    .contactForm form .emailDiv,
+    .contactForm form .companyDiv,
+    .contactForm form .phoneDiv,
+    .contactForm form .messageDiv {
+        width: 100%;
+    }
+
+    .nameDiv, .companyDiv {
+        margin-bottom: 20px;
+    }
+
+    .contactInfos {
+        width: 100%;
+        p {
+            font-size: 13px;
+        }
+
+        .contact-icon {
+            font-size: 15px;
+        }
+    }
+
+}

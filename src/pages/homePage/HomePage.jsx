@@ -60,10 +60,14 @@ export default function HomePage() {
                 <h2>Mes valeurs</h2>
                 <ValuesHorizontalLine/>
             </div>
+            <div>
                 <h2>Pourquoi choisir Madame Paperasse ?</h2>
                 <Reasons/>
+            </div>
+            <div>
                 <h2>Comment cela fonctionne-t-il ?</h2>
                 <ProcessTimeline/>
+            </div>
             <HashLink to='/contact#contact-title'>
                 <ContactButton text="Contactez-moi"/>            
             </HashLink>

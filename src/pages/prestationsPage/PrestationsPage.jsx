@@ -49,18 +49,18 @@ export default function PrestationsPage() {
     return (
         <div id="presta-title">
             <h1>Mes Prestations</h1>
-            <section class="conference-timeline" id="presta-timeline">
+            <section class="presta-timeline" id="presta-timeline">
                 <div class="conference-center-line presta-line"></div>
-                    <div class="conference-timeline-content">
+                    <div class="presta-timeline-content">
                         {/* <!-- Article --> */ }
                         <div class="timeline-article presta-article">
-                            <div class="content-left-container">
-                                <div class="content-left">
+                            <div class="presta-content-left-container">
+                                <div class="presta-content-left">
                                 <img src="images/devis.png" alt="commercial" className='prestation-picture' />   
                                 </div>
                             </div>
-                            <div class="content-right-container presta-content-right-container container-1">
-                                <div class="content-right presta-content-right">
+                            <div class="presta-content-right-container container-1">
+                                <div class="presta-content-right">
                                     <h4>Partie Commerciale</h4>
                                     <ul>
                                         <li>Gestion des devis et facturation</li>
@@ -72,18 +72,18 @@ export default function PrestationsPage() {
 
                                 </div>
                             </div>
-                        <div class="meta-date presta-date"></div>
+                        <div class="presta-date"></div>
                     </div>
                     {/* <!-- // Article -->
                         {/* <!-- Article --> */}
                         <div class="timeline-article presta-article">
-                            <div class="content-left-container">
-                                <div class="content-left">
+                            <div class="presta-content-left-container">
+                                <div class="presta-content-left">
                                     <img src="images/tresorerie.png" alt="conseil" className='prestation-picture'/>
                                 </div>
                             </div>
-                            <div class="content-right-container presta-content-right-container container-1">
-                                <div class="content-right presta-content-right">
+                            <div class="presta-content-right-container container-1">
+                                <div class="presta-content-right">
                                     <h4>Partie Ressources Humaines</h4>
                                     <ul>
                                         <li> Accompagnement au recrutement (rédaction et publication des fiches de postes/offres d’emplois, gestion du processus de recrutement)</li>
@@ -99,13 +99,13 @@ export default function PrestationsPage() {
                     
                     <!-- Article --> */}
                     <div class="timeline-article presta-article">
-                        <div class="content-left-container">
-                            <div class="content-left">
+                        <div class="presta-content-left-container">
+                            <div class="presta-content-left">
                                 <img src="images/gain.png" alt="gain"className='prestation-picture' />
                             </div>
                         </div>
-                        <div class="content-right-container presta-content-right-container" id="container-3">
-                            <div class="content-right presta-content-right">
+                        <div class="presta-content-right-container" id="container-3">
+                            <div class="presta-content-right">
                                 <h4>Partie Financière</h4>
                                 <ul>
                                     <li>Pré-comptabilité: contrôle des pièces comptables, numérisation et transmission au comptable </li>
@@ -118,13 +118,13 @@ export default function PrestationsPage() {
                     </div>
                     {/* <!-- // Article --> */}
                     <div class="timeline-article presta-article">
-                        <div class="content-left-container">
-                            <div class="content-left">
+                        <div class="presta-content-left-container">
+                            <div class="presta-content-left">
                                 <img src="images/mails.png" alt="gain"className='prestation-picture' />
                             </div>
                         </div>
-                        <div class="content-right-container presta-content-right-container" id="container-4">
-                            <div class="content-right presta-content-right">
+                        <div class="presta-content-right-container" id="container-4">
+                            <div class="presta-content-right">
                                 <h4>Partie Administrative</h4>
                                 <ul>
                                     <li>Gestion des mails et courriers</li>
@@ -139,13 +139,13 @@ export default function PrestationsPage() {
 
                     {/* <!-- // Article --> */}
                     <div class="timeline-article presta-article">
-                        <div class="content-left-container">
-                            <div class="content-left">
+                        <div class="presta-content-left-container">
+                            <div class="presta-content-left">
                                 <img src="images/lientiers.png" alt="gain"className='prestation-picture' />
                             </div>
                         </div>
-                        <div class="content-right-container presta-content-right-container" id="container-5">
-                            <div class="content-right presta-content-right">
+                        <div class="presta-content-right-container" id="container-5">
+                            <div class="presta-content-right">
                                 <h4>Relation avec les tiers</h4>
                                 <ul>
                                     <li>Fournisseurs</li>
