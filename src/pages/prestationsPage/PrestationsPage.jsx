@@ -86,8 +86,9 @@ export default function PrestationsPage() {
                                 <div class="presta-content-right">
                                     <h4>Partie Ressources Humaines</h4>
                                     <ul>
-                                        <li> Accompagnement au recrutement (rédaction et publication des fiches de postes/offres d’emplois, gestion du processus de recrutement)</li>
-                                        <li>Assistance sur l’entièreté du parcours du salarié dans l’entreprise (DPAE, rédaction des contrats, mutuelle, CP, départs, etc... </li>
+                                        <li>Accompagnement au recrutement (rédaction et publication des fiches de postes/offres d’emplois, gestion du processus de recrutement)</li>
+                                        <li>Assistance sur l’entièreté du parcours du salarié dans l’entreprise (DPAE, rédaction des contrats, mutuelle, CP, départs, etc...) </li>
+                                        <li>Assistance sur la gestion de paie </li>
                                     </ul>
                                 </div>
                             </div>

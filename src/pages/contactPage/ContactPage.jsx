@@ -35,6 +35,7 @@ export default function ContactPage() {
         .then(
             (data) => {
                 setMailInfos({email: "", message: ""})
+                alert('test')
             },
             (error) => {
                 console.log(error)

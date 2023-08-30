@@ -10,7 +10,7 @@ export default function Reasons() {
     const [reasons, setreasons] = useState([
         {
             title:"Maîtrise des coûts",
-            text:"Je ne rentre pas dans vos effectifs donc pas de charges sociales à verser et grâce au devis aucune surprise, vous connaissez à l’avance le coût global, une facturation à l’heure réellement faite et pas un abonnement"
+            text:"Je ne rentre pas dans vos effectifs donc pas de charges sociales à verser et grâce au devis aucune surprise, vous connaissez avec à l’avance le coût global, une facturation à l’heure réellement faite et pas un abonnement"
         },
         {
             title: "Prestation sur-mesure",

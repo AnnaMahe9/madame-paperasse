@@ -68,7 +68,7 @@ export default function ProcessTimeline() {
                     </div>
                     <div class="content-right-container">
                         <div class="content-right">
-                            <p>Vous me contactez par mail, sur les réseaux ou via le formulaire de contact en me décrivant votre besoin.</p>
+                            <p>Vous me contactez par téléphone, sur les réseaux ou via le formulaire de contact en me décrivant votre besoin.</p>
                         </div>
                     </div>
                     <div class="meta-date">
@@ -85,7 +85,7 @@ export default function ProcessTimeline() {
                     </div>
                     <div class="content-right-container">
                         <div class="content-right">
-                            <p>Nous fixons ensemble un rendez-vous afin de se rencontrer, définir ensemble vos besoins et préparer notre collaboration</p>
+                            <p>Nous fixons ensemble un rendez-vous afin de se rencontrer, définir vos besoins et préparer notre collaboration</p>
                         </div>
                     </div>
                 <div class="meta-date"></div>

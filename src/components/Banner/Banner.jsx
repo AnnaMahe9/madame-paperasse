@@ -12,7 +12,7 @@ export default function Banner() {
         <img src="madame.jpg" alt="Madame Paperasse" className="phone-banner-logo animate__animated animate__fadeInLeft" />
         <h1 className='animate__animated animate__fadeInDown'>Bienvenue chez <br /> Madame Paperasse</h1>
         <p>
-          Madame Paperasse c’est à la fois une assistante administrative, une assistante RH et une assistante de gestion… 
+          Madame Paperasse c’est à la fois une assistante administrative, une assistante RH, une assistante de gestion… 
         </p>
         <HashLink to='/#discover' spy={true} smooth={true} offset={100} duration={500}>
           <ContactButton text="Découvrir" id='discover-button'/>

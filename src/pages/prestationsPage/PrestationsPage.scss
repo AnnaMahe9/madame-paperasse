@@ -89,10 +89,12 @@
 }
 
 @media screen and (max-width:500px) {
-     .presta-content-left-container, .presta-timeline .presta-line, .presta-date {
+     .presta-timeline .presta-line, .presta-date {
         display: none;
      }
-     
+     .presta-content-left-container {
+        display: block;
+     }
      .presta-timeline {
         width: 100%;
         margin-top: 20px;

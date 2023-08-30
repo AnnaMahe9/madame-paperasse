@@ -21,8 +21,7 @@ export default function HomePage() {
         {
             title:"Une expertise sur tous secteurs",
             img:"images/conseil.png",
-            text: `J’interviens dans tous les secteurs d’activité et entreprises (TPE, PME, associations, EI,..), même si, il est
-            vrai, mon expertise se porte principalement sur le secteur du CHR (Cafés, Hôtels, Restaurants)`
+            text: `J’interviens dans tous les secteurs d’activité et types d'entreprises (TPE, PME, associations, EI,..), même si mon expertise se porte principalement sur le secteur du CHR (Cafés, Hôtels, Restaurants)`
         },
         {
             title:"Un haut standing de professionalisme",
