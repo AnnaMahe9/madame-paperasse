@@ -35,7 +35,7 @@ export default function ContactPage() {
         .then(
             (data) => {
                 setMailInfos({email: "", message: ""})
-                alert('test')
+                alert('Votre email a bien été envoyé !')
             },
             (error) => {
                 console.log(error)
@@ -133,9 +133,14 @@ export default function ContactPage() {
 
                 <div className='separation-line'></div>
 
-                <div className='contactInfos'>
-                    <p> <FontAwesomeIcon icon={faMobileScreenButton} className='contact-icon' /> 07 50 90 57 54</p>
-                    <p className='mailInfos'> <FontAwesomeIcon icon={faEnvelope} className='contact-icon' />madame.paperasse.rennes@gmail.com</p>
+                <div className='contactInfosContainer'>
+                    <div className='logoContainer'>
+                        <img src="logo.png" alt="logo" className="navbar-logo"/>
+                    </div>
+                    <div className='contactInfos'>
+                        <p><FontAwesomeIcon icon={faMobileScreenButton} className='contact-icon' /> 07 50 90 57 54</p>
+                        <p className='mailInfos'> <FontAwesomeIcon icon={faEnvelope} className='contact-icon' />madame.paperasse.rennes@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>

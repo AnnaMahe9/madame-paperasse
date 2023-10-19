@@ -22,6 +22,8 @@
 
 .presentation-last-container {
     text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 .presentation-last-container p {
