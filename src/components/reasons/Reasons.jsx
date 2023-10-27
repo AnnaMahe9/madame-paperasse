@@ -14,7 +14,7 @@ export default function Reasons() {
         },
         {
             title: "Prestation sur-mesure",
-            text: "Lieu au choix: sur place ou à distance, rythme à la carte: chaque semaine, deux fois par mois ou deux fois par an, flexibilité"
+            text: "Lieu au choix: sur place ou à distance, rythme à la carte: chaque semaine, deux fois par mois ou deux fois par an, flexibilité garantie"
         },
         {
             title: "Gain de temps",
