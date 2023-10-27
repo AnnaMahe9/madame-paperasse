@@ -14,11 +14,11 @@ export default function Reasons() {
         },
         {
             title: "Prestation sur-mesure",
-            text: "Lieu au choix: sur place ou à distance, rythme à la carte: chaque semaine, deux fois par mois ou deux fois par an, flexibilité"
+            text: "Lieu au choix: sur place ou à distance, rythme à la carte: chaque semaine, deux fois par mois ou deux fois par an, flexibilité garantie"
         },
         {
             title: "Gain de temps",
-            text: "Les chefs d’entreprise ont tous un point en commun… il manque de temps ! Que ce soit pour consacrer du temps à leur vie perso, ou à son cœur de métier et se développer… Externaliser la paperasse c’est s’offrir du temps en plus dans la journée"
+            text: "Les chefs d’entreprise ont tous un point en commun… il manque de temps ! Que ce soit pour consacrer du temps à leur vie perso, ou à leur cœur de métier et se développer… Externaliser la paperasse c’est s’offrir du temps en plus dans la journée"
         }
     ])
 
