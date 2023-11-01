@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
@@ -7,7 +7,7 @@ import './ValuesHorizontalLine.scss';
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
 export default function ValuesHorizontalLine() {
-    const [values, setValues] = useState(["Honnêteté", "Respect", "Transparence", "Humain"])
+    const values = ["Honnêteté", "Respect", "Transparence", "Humain"]
     const slideTop = (elem) => {
         gsap.fromTo(
           elem,

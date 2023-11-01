@@ -2,7 +2,7 @@ import React from 'react';
 import 'animate.css';
 import './Banner.scss';
 import ContactButton from '../contactButton/ContactButton';
-import { HashLink, HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 
 export default function Banner() {

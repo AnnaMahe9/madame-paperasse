@@ -2,11 +2,11 @@ import ContactButton from '../../components/contactButton/ContactButton';
 import ProcessTimeline from '../../components/processTimeline/ProcessTimeline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ContactPage.scss';
-import { faCircleCheck, faCircleExclamation, faEnvelope, faMobile, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck, faCircleExclamation, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
 
@@ -47,30 +47,6 @@ export default function ContactPage() {
     function isValidEmail(email) {
         return /\S+@\S+\.\S+/.test(email);
     }
-
-    const slideTop = (elem) => {
-        gsap.fromTo(
-          elem,
-          {
-            opacity:0,
-            y:-200
-          },
-          {
-            opacity:1,
-            y: 0,
-            scrollTrigger: {
-              trigger: elem,
-              start:"top center",
-              end: "bottom center"
-            }
-          }
-        )
-      }
-      
-      useEffect(()=> {
-        // slideTop(".contactForm")
-      })
-
 
     const handleChange = (event) => {
         console.log(event);
@@ -139,7 +115,6 @@ export default function ContactPage() {
                     </div>
                     <div className='contactInfos'>
                         <p><FontAwesomeIcon icon={faMobileScreenButton} className='contact-icon' /> 07 50 90 57 54</p>
-                        <p className='mailInfos'> <FontAwesomeIcon icon={faEnvelope} className='contact-icon' />madame.paperasse.rennes@gmail.com</p>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './PrestationsPage.scss';
-import { NavLink } from 'react-router-dom';
 import ContactButton from '../../components/contactButton/ContactButton';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';

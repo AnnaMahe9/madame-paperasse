@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { HashLink, HashLink as Link } from 'react-router-hash-link'
+import React from 'react';
+import { HashLink } from 'react-router-hash-link'
 import Banner from '../../components/Banner/Banner';
 import PresentationCard from '../../components/PresentationCard/PresentationCard';
 import ValuesHorizontalLine from '../../components/valuesHorizontalLine/valuesHorizontalLine';
@@ -9,7 +9,7 @@ import ProcessTimeline from '../../components/processTimeline/ProcessTimeline';
 import ContactButton from '../../components/contactButton/ContactButton';
 
 export default function HomePage() {
-    const [presentationParagraphs, setPresentationParagraphs] = useState([
+    const presentationParagraphs = [
         {
             title:"Un véritable couteau suisse",
             img:"images/accompagnement.png",
@@ -30,7 +30,7 @@ export default function HomePage() {
             d’une entreprise, je vous accompagne autant sur la partie financière, administrative que sur la partie RH
             ou encore sur les aspects de stratégie de commercialisation et communication.`
         }
-    ])
+    ]
 
     return (
         <div className='main-container'>
