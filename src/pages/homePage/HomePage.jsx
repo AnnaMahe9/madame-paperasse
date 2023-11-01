@@ -59,11 +59,11 @@ export default function HomePage() {
                 <h2>Mes valeurs</h2>
                 <ValuesHorizontalLine/>
             </div>
-            <div>
+            <div className="presentation-paragraphs-container">
                 <h2>Pourquoi choisir Madame Paperasse ?</h2>
                 <Reasons/>
             </div>
-            <div>
+            <div className="presentation-paragraphs-container">
                 <h2>Comment cela fonctionne-t-il ?</h2>
                 <ProcessTimeline/>
             </div>
