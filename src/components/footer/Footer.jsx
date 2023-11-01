@@ -13,7 +13,7 @@ export default function Footer() {
                 <NavLink to='https://www.instagram.com/mme.paperasse/'><FontAwesomeIcon icon={faInstagramSquare} className='icon' /></NavLink>
                 <NavLink to='https://www.facebook.com/Mme.paperasse'><FontAwesomeIcon icon={faFacebookSquare} className='icon' /></NavLink>
             </div>
-            <p>- Mentions légales -</p>
+            <NavLink to='/mentions-legales'>Mentions Légales</NavLink>
         </div>
     )
 }

@@ -1,0 +1,31 @@
+.main-container {
+    width: 60%;
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    p {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin: auto;
+        padding-bottom: 50px;
+        
+        h2 {
+            margin: 0.5rem;
+        }
+        p {
+            margin: 0.5rem;
+        }
+    }
+}
