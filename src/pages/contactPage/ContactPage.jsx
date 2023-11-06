@@ -36,7 +36,7 @@ export default function ContactPage() {
         }
         
         if (emailError === null && namesError === null && messageError === null && mailInfos.names && mailInfos.email && mailInfos.message) {
-            await fetch('http://localhost:3001/sendEmail', requestOptions)
+            await fetch(process.env.API_URL, requestOptions)
             .then(
                 (data) => {
                     setMailInfos({names: "", email: "", company:"", phoneNumber: "", message: ""})
