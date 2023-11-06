@@ -36,7 +36,7 @@ export default function ContactPage() {
         }
         
         if (emailError === null && namesError === null && messageError === null && mailInfos.names && mailInfos.email && mailInfos.message) {
-            await fetch("https://backend.madame-paperasse.fr/", requestOptions)
+            await fetch("http://backend.madame-paperasse.fr/sendEmail", requestOptions)
             .then(
                 (data) => {
                     setMailInfos({names: "", email: "", company:"", phoneNumber: "", message: ""})
