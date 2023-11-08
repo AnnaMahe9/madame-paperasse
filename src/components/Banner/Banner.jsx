@@ -9,7 +9,7 @@ export default function Banner() {
   return (
     <div className="banner">
       <div className='banner-titles'>
-        <img src="madame.jpg" alt="Madame Paperasse" className="phone-banner-logo animate__animated animate__fadeInLeft" />
+      <img src="photo_MP.jpg" alt="Madame Paperasse" className="phone-banner-logo animate__animated animate__fadeInLeft" />
         <h1 className='animate__animated animate__fadeInDown'>Bienvenue chez <br /> Madame Paperasse</h1>
         <p>
           Madame Paperasse c’est à la fois une assistante administrative, une assistante RH, une assistante de gestion… 
@@ -19,7 +19,7 @@ export default function Banner() {
         </HashLink>
       </div>
       <div className='divider animate__animated animate__fadeInDown'></div>
-      <img src="madame.jpg" alt="Madame Paperasse" className="banner-logo animate__animated animate__fadeInRight" />
+      <img src="photo_MP.jpg" alt="Madame Paperasse" className="banner-logo animate__animated animate__fadeInRight" />
     </div>
   )
 }
